@@ -1,0 +1,531 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #e5e5e5;
+}
+.main-view{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: #e5e5e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+}
+.main-view h4{
+    color: #2c784d;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+}
+.main-view nav{
+    display: flex;
+    gap: 20px;
+}
+.main-view nav a{
+    text-decoration: none;
+    color: #171717;
+    display: inline-block;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 2px;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+.main-view nav a:hover{
+    border-bottom-color: #687943;
+}
+.main-view .sosh{
+    display: flex;
+    gap: 25px;
+}
+.main-view .sosh a img{
+    width: 16px;
+    height: 16px;
+}
+.main-view .hideOnMain{
+    display: none;
+}
+.main-view .open{
+    background-color: #171717;
+    width: 40px;
+    height: 3px;
+    border-radius: 50px;
+    position: relative;
+}
+.main-view .open::before{
+    content: '';
+    background-color: #171717;
+    width: 50%;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: -10px;
+}
+.main-view .open::after{
+    content: '';
+    background-color: #171717;
+    width: 50%;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}
+.main-view .close::before, .main-view .close::after{
+    left: 50%;
+    transform: translate(-50%) rotate(-90deg);
+}
+.main-view .close{
+    transform: rotate(45deg);
+}
+.mobile-view{
+    display: none;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color:  rgba(229, 229, 229, 0.1);
+    backdrop-filter: blur(5px);
+}
+.mobile-view nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mobile-view nav a{
+    text-decoration: none;
+    color: #171717;
+    font-size: 1.8rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    display: block;
+    width: 100%;
+    padding: 10px 0px 10px 40px;
+    transition: background-color .3s ease-in-out;
+}
+.mobile-view nav a:hover{
+    background-color: #445c11;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 160px;
+    scroll-margin-top: 120px;
+}
+.left{
+    width: 30%;
+    margin-top: 180px;
+}
+.left h4{
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+.left h1{
+    font-size: 2.5rem;
+}
+.left h1 span{
+    color: #2c784d;
+}
+
+.profile-pic{
+    margin-top: 0px;
+    width: 30%;
+    position: relative;
+}
+.profile-pic img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.profile-pic .green{
+    width: 300px;
+    height: 300px;
+    background-color: #445c11;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: -40%;
+    z-index: -1;
+}
+.right{
+    width: 30%;
+}
+.right h2{
+    font-size: 1.8rem;
+    text-align: right;
+}
+.right h2 span{
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #000;
+}
+.right p{
+    text-align: right;
+}
+.stats{
+    width: 20%;
+    margin-left: 40px;
+    margin-top: 40px;
+    position: relative;
+}
+.one{
+    background-color: #d45628;
+    height: 30px;
+    width: 100%;
+    color: #fff;
+    font-variant: small-caps;
+    position: absolute;
+    z-index: -3;
+    top: 0;
+}
+.ng-one{
+    background-color: #2c784d;
+    height: 30px;
+    width: 80%;
+    color: #fff;
+    font-variant: small-caps;
+    position: absolute;
+    z-index: -2;
+    top: 20px;
+}
+.ng-two{
+    background-color: #9a2222;
+    height: 24px;
+    width: 60%;
+    color: #fff;
+    font-variant: small-caps;
+    position: absolute;
+    z-index: -1;
+    top: 40px;
+}
+.idea{
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+.idea img{
+    width: 100px;
+    height: 100px;
+}
+.clear-fix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.clear-fix{
+    margin-bottom: 200px;
+}
+.works{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px 120px 40px;
+    scroll-margin-top: 100px;
+}
+.works h1{
+    font-size: 2.5rem;
+    padding-bottom: 2px;
+}
+.works h3{
+    font-size: 1.5rem;
+    padding-left: 70px;
+    padding-bottom: 20px;
+}
+.works p{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.works span{
+    display: inline-block;
+    background-color: #2c784d;
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+}
+.my-works a{
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+}
+.my-works a img{
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+}
+.my-works a:hover{
+    transform: scale(1.05);
+}
+.my-works{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.works button{
+    background-color: #2c784d;
+    color: #fff;
+    padding: 10px 16px;
+    outline: 0;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+.works button:active{
+    transform: translateY(2px);
+}
+.hfc{
+    margin:  0 40px 120px 40px;
+    scroll-margin-top: 100px;
+}
+.cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cen h1{
+    font-size: 2.5rem;
+    padding-bottom: 2px;
+}
+.cen span{
+    display: inline-block;
+    background-color: #2c784d;
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.cen p{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hfc figure{
+    margin: 60px 0;
+}
+.hfc figure blockquote{
+    background-color: #2c784d;
+    color: white;
+    padding: 12px 14px 12px 8px;
+    border-radius: 14px;
+    position: relative;
+}
+.hfc figure blockquote p{
+    font-size: 1.8rem;
+    padding: 40px 120px;
+}
+.hfc figure blockquote p::before{
+    content: "\201C";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    font-size: 8.5rem;
+    opacity: 0.5;
+}
+.hfc figure blockquote p::after{
+    content: "\201D";
+    position: absolute;
+    bottom: -30%;
+    right: 3%;
+    font-size: 8.5rem;
+    opacity: 0.5;
+}
+.hfc figure figcaption{
+    font-size: 1.8rem;
+    margin-top: 8px;
+    color: #708090;
+    font-weight: bolder;
+    text-align: right;
+}
+.cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+.cta h2{
+    font-size: 1.8rem;
+}
+.cta p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 100%;
+    margin-top: 18px;
+    text-align: center;
+}
+.email-ctn{
+    background-color: #171717;
+    color: #ffffff;
+    border-radius: 48px;
+    width: 628px;
+    max-height: 69px;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+.cust-email{
+    flex: 1;
+    padding: 8px 10px 8px 32px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    caret-color: #ffffff;
+}
+.send-btn{
+    background-color: #2c784d;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    max-height: 53px;
+    max-width: 53px;
+    padding: 3px;
+    margin: 6px;
+    cursor: pointer;
+}
+footer{
+    border-top: 1px solid #708090;
+    padding: 32px 0;
+    margin: 0 40px;
+    color: #708090;
+    font-size: 0.9rem;
+}
+footer p{
+    text-align: center;
+}
+footer .sosh{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
+        display: none;
+    }
+    .main-view .hideOnMain{
+        display: block;
+    }
+    .main-view h4{
+        font-size: 1.8rem;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 140px;
+        margin-bottom: px;
+        padding-top: 0;
+        justify-content: center;
+    }
+    .left, .profile-pic, .right{
+        width: 100%;
+    }
+    .left h1{
+        font-size: 3rem;
+        font-style: italic;
+    }
+    .left h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .left h1 br{
+        display: none;
+    }
+    .left{
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+    .profile-pic img{
+        width: 60%;
+        height: 60%;
+        margin-bottom: 60px;
+    }
+    .right h2 {
+        font-size: 2.4rem;
+        text-align: center;
+        
+    }
+    .right p {
+        font-size: 1.5rem;
+        text-align: center;
+    } 
+    .right p br{
+        display: none;
+    }
+    .idea, .stats, .green{
+        display: none;
+    }
+    .clear-fix{
+        margin-bottom: 85px;
+    }
+    .works h1{
+        font-size: 3rem;
+    }
+    .works h3{
+        font-size: 2rem;
+    }
+    .works p{
+        font-size: 1.5rem;
+    }
+    .works span, .cen span{
+        width: 50%;
+    }
+    .my-works{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .my-works a:last-child{
+        display: none;
+    }
+    .works button{
+        width: 20%;
+    }
+    .cen h1{
+        font-size: 3rem;
+    }
+    .cen p{
+        font-size: 1.5rem;
+    }
+    .hfc figure:nth-of-type(2) blockquote p::after{
+        content: "\201D";
+        position: absolute;
+        bottom: -25%;
+        right: 3%;
+        font-size: 8.5rem;
+        opacity: 0.5;
+    }
+    .cta p{
+        font-size: 1.5rem;
+    }
+    footer{
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer .sosh{
+        display: flex;
+        gap: 25px;
+    }
+    footer .sosh a img{
+        width: 16px;
+        height: 16px;
+    }
+}
