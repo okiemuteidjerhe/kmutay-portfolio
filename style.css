@@ -692,6 +692,13 @@ footer .sosh{
     }
     footer{
         font-size: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer .sosh{
+        display: flex;
+        gap: 19px;
     }
     footer .sosh a img{
         width: 14px;
@@ -709,7 +716,10 @@ footer .sosh{
         height: 25px;
         width: 25px;
         padding: 3px;
-        margin-left: -23px;
+        margin-left: -20%;
+    }
+    footer{
+        display: block;
     }
     footer p{
         font-size: 0.7rem;
