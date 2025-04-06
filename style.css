@@ -416,6 +416,7 @@ footer .sosh{
     display: none;
 }
 
+/*Tablets, Landscape view, Medium screens*/
 @media screen and (min-width:648px) and (max-width:935px) {
     .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
         display: none;
@@ -533,7 +534,7 @@ footer .sosh{
     }
 }
 
-/* Small phones (374px < x < 649px) */
+/* Small phones (374px <= x < 649px) */
 @media screen and  (max-width: 649px){
     .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
         display: none;
