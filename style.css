@@ -90,13 +90,13 @@ body{
 .mobile-view{
     display: none;
     position: fixed;
-    top: 75px;
+    top: 70px;
     right: 0;
     height: 100vh;
     width: 100%;
     z-index: 999;
-    background-color:  rgba(229, 229, 229, 0.1);
-    backdrop-filter: blur(5px);
+    background-color: #e5e5e5; 
+    /*  rgba(229, 229, 229, 0.1); backdrop-filter: blur(5px); */
 }
 .mobile-view nav{
     display: flex;
@@ -107,7 +107,7 @@ body{
     text-decoration: none;
     color: #171717;
     font-size: 1.8rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
     display: block;
     width: 100%;
     padding: 10px 0px 10px 40px;
@@ -415,6 +415,64 @@ footer p{
 footer .sosh{
     display: none;
 }
+
+/* Small phones (≤375px) */
+/* @media screen and (max-width: 375px){
+    .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
+        display: none;
+    }
+    .main-view .hideOnMain{
+        display: block;
+    }
+    .main-view h4{
+        font-size: 1.8rem;
+    }
+    .idea, .stats, .green{
+        display: none;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+    }
+    .left, .profile-pic, .right{
+        width: 100%;
+    }
+    .left h1{
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    .left h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .left h1 br{
+        display: none;
+    }
+    .left{
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+    .right h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        
+    }
+    .right p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+    } 
+    .right p br{
+        display: none;
+    } 
+} */
+
+
 @media screen and (max-width:768px) {
     .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
         display: none;
@@ -431,7 +489,6 @@ footer .sosh{
         align-items: center;
         text-align: center;
         margin-top: 140px;
-        margin-bottom: px;
         padding-top: 0;
         justify-content: center;
     }
@@ -529,3 +586,74 @@ footer .sosh{
         height: 16px;
     }
 }
+
+@media screen and (max-width: 375px){
+    .main-view nav .hideOnMobile, .main-view .sosh .hideOnMobile{
+        display: none;
+    }
+    .main-view .hideOnMain{
+        display: block;
+    }
+    .main-view h4{
+        font-size: 1.8rem;
+    }
+    .idea, .stats, .green{
+        display: none;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+    }
+    .left, .profile-pic, .right{
+        width: 100%;
+    }
+    .left h1{
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 1.3;
+    }
+    .left h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .left h1 br{
+        display: none;
+    }
+    .left{
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+    /* .profile-pic{
+        width: 120px;
+        height: 120px;
+        margin: 20px auto;
+    } */
+    .right h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        
+    }
+    .right p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+    } 
+    .right p br{
+        display: none;
+    } 
+}
+
+
+/* iPhone XR Portrait (≤414px) */
+/* @media screen and (max-width: 414px) */
+
+/* Larger phones (415px–768px) */
+/* @media screen and (min-width: 415px) and (max-width: 768px) */
+
+/* iPhone XR Landscape (≤896px in landscape) */
+/* @media (max-width: 896px) and (orientation: landscape) */
+
