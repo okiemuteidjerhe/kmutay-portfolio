@@ -379,6 +379,13 @@ body{
     margin-top: 18px;
     text-align: center;
 }
+.cta p a{
+    text-decoration: none;
+    color: #445c11;
+}
+.cta p a:hover{
+    color: #d45628
+}
 .email-ctn{
     background-color: #171717;
     border-radius: 48px;
