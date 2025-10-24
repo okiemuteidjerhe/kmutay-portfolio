@@ -380,10 +380,11 @@ body{
     text-align: center;
 }
 .cta p i a{
+    text-decoration: underline;
     color: #445c11;
 }
 .cta p i a:hover{
-    color: #d45628
+    color: #d45628;
 }
 .email-ctn{
     background-color: #171717;
