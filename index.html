@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kmutay's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "ssKxyf3209JzBcGJQ",
+        });
+    })();
+</script>
+<script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,8 +29,8 @@
                 <a href="#cta" class="hideOnMobile">contact me</a>
             </nav>
             <div class="sosh">
-                <a href="#" class="hideOnMobile"><img src="img/x-twitter-brands.svg"></a>
-                <a href="#" class="hideOnMobile"><img src="img/linkedin-brands.svg"></a>
+                <a href="https://github.com/okiemuteidjerhe" target="_blank" class="hideOnMobile"><img src="img/github-brands.svg"></a>
+                <a href="https://www.linkedin.com/in/okiemuteidjerhe-oharisi-3094b7246" target="_blank" class="hideOnMobile"><img src="img/linkedin-brands.svg"></a>
                 <a href="#" class="hideOnMobile"><img src="img/figma-brands.svg"></a>
             </div>
             <div class="hideOnMain open"></div>
@@ -120,19 +131,26 @@
 
     <section class="cta" id="cta">
         <h2>Let's Build Something Sleek, Stylish & Seamless!</h2>
-        <p><i>Ready to bring your vision  to life? Let's make it happen; <br><a href='mailto: idjerheokiemute@gmail.com'>reach out and let's chat!</a></i></p>
-       <!-- <div class="email-ctn">
-            <input class="cust-email" type="email" placeholder="Enter your email...">
-            <img class="send-btn" src="img/paper-airplane.svg">
-        </div> -->
+        <p><i>Ready to bring your vision  to life? Let's make it happen! <!-- <br><a href='mailto: idjerheokiemute@gmail.com'>reach out and let's chat!</a> --></i></p>
+       <form class="email-ctn">
+            <input id="cust-email" class="cust-email" type="email" required placeholder="Enter your email...">
+            <button class="send-btn"><img  src="img/paper-airplane.svg"></button>
+       </form>
+       <dialog class="message">
+         <div>
+            <h2 class="status-title"></h4>
+            <p class="status-message"></p>
+         </div>
+         <button id="dialogBtn">Close</button>
+       </dialog>
         
     </section>
 
     <footer>
-        <p>@2025, all rights reserved</p>
+        <p>@<time></time>, all rights reserved</p>
         <div class="sosh">
-            <a href="#"><img src="img/x-twitter-brands.svg"></a>
-            <a href="#"><img src="img/linkedin-brands.svg"></a>
+            <a href="https://github.com/okiemuteidjerhe" target="_blank"><img src="img/github-brands.svg"></a>
+            <a href="https://www.linkedin.com/in/okiemuteidjerhe-oharisi-3094b7246" target="_blank"><img src="img/linkedin-brands.svg"></a>
             <a href="#"><img src="img/figma-brands.svg"></a>
         </div>
     </footer>

@@ -379,13 +379,13 @@ body{
     margin-top: 18px;
     text-align: center;
 }
-.cta p i a{
+/* .cta p i a{
     text-decoration: underline;
     color: #2c784d;
 }
 .cta p i a:hover{
     color: #d45628;
-}
+} */
 .email-ctn{
     background-color: #171717;
     border-radius: 48px;
@@ -415,6 +415,51 @@ body{
     padding: 3px;
     margin: 6px;
     cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+.send-btn img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.send-btn:hover{
+    transform: rotate(45deg);
+}
+.message{
+    position: fixed;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,-50%);
+    width: min(90vw, 420px);
+    background-color: #e5e5e5;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 14px;
+}
+.message::backdrop{
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+}
+.message div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+}  
+.message button{
+    width: 100%;
+    background-color: #708090;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.message button:hover{
+
 }
 footer{
     border-top: 1px solid #708090;
